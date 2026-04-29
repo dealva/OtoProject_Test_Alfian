@@ -6,14 +6,14 @@
         <field name="name">workshop.service.list</field>
         <field name="model">workshop.service</field>
         <field name="arch" type="xml">
-            <list string="Service Orders"
+            <tree string="Service Orders"
                   decoration-success="state == 'done'"
                   decoration-muted="state == 'cancelled'"
                   decoration-warning="state == 'in_progress'">
                 <field name="name"/>
                 <field name="partner_id"/>
                 <field name="vehicle_name"/>
-                <field name="technician_name"/>
+                <field name="technician_id"/>
                 <field name="date_start"/>
                 <field name="date_end"/>
                 <field name="duration_days"/>
@@ -23,7 +23,7 @@
                        decoration-warning="state == 'in_progress'"
                        decoration-info="state == 'confirmed'"
                        decoration-muted="state == 'cancelled'"/>
-            </list>
+            </tree>
         </field>
     </record>
 

@@ -1,0 +1,13 @@
+1. depend name sales -> sale
+2. service_id = fields.Many2one(
+        'workshop.service.order',  ->  'workshop.service'
+3.  partner_id = fields.Many2one(
+        'res.partners', -> 'res.partner'
+4. from . import workshop_service_line -->missing
+5. in model access model_workshop_service_order -> model_workshop_service
+6. <list string="Service Orders"
+                  decoration-success="state == 'done'"
+                  decoration-muted="state == 'cancelled'"
+                  decoration-warning="state == 'in_progress'">
+                <field name="name"/>
+                <field name="partner_name"/>  --> list --> tree dan partner_name -->partner_id
